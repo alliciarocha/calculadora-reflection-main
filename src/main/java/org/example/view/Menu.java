@@ -6,7 +6,6 @@ import java.util.Set;
 import java.util.Scanner;
 
 public class Menu {
-
     public static void show(){
         Reflections reflections = new Reflections("org.example.model");
 
@@ -17,29 +16,6 @@ public class Menu {
         }
         System.out.println("Sair");
         System.out.println("Digite a operação desejada: ");
-        Scanner sc = new Scanner(System.in);
-        String operacao = sc.nextLine();
-        System.out.println("Digite o Primeiro Valor");
-        int a = sc.nextInt();
-        System.out.println("Digite o Segundo Valor");
-        int b = sc.nextInt();
-
-        ControladorCalculadora control = new ControladorCalculadora();
-
-        int resultado = control.calcular(operacao, a, b);
-
-        System.out.println("Resultado: " + resultado);
-    }
-
-    public static void exibir(){
-
-        System.out.println("Soma");
-        System.out.println("Subtração");
-        System.out.println("Multiplicação");
-        System.out.println("Divisão");
-        System.out.println("Sair");
-        System.out.println("Digite a operação desejada: ");
-
         Scanner sc = new Scanner(System.in);
         String operacao = sc.nextLine();
         System.out.println("Digite o Primeiro Valor");
