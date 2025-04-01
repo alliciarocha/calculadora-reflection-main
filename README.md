@@ -1,6 +1,4 @@
-# Calculadora com o Uso de Reflection utilizando Lib
-
-Calculadora utilizando reflection 
+# Calculadora Utilizando Reflection
 
 ## Instalação
 
