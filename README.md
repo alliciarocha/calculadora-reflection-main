@@ -1,12 +1,18 @@
-# Calculadora Utilizando Reflection
+# 🧮 Calculadora Utilizando Reflection 
+Este projeto implementa uma calculadora simples utilizando Reflection em Java, permitindo invocar métodos dinamicamente para realizar operações aritméticas.
+## ⚙️ Operações
+- ➕ Soma
+- ➖ Subtração
+- ✖️ Multiplicação
+- ➗ Divisão
 
-## Instalação
+## 🛠️ Instalação
 
 ```bash
 mvn clean install
 ```
 
-## Execução
+## 🚀 Execução
 ````bash
 mvn exec:java
 ````
