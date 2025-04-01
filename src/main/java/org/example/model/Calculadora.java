@@ -1,7 +1,7 @@
 package org.example.model;
-import org.example.model.IOperation;
 import org.reflections.Reflections;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 public class Calculadora {
@@ -12,12 +12,12 @@ public class Calculadora {
         operacoes = reflections.getSubTypesOf(IOperation.class);
     }
 
-    public int calcular(String op, int a, int b) {
+    public int calcular(String op, ArrayList<Integer> valores) {
         for (Class<? extends IOperation> clazz : operacoes) {
             if (clazz.getSimpleName().equalsIgnoreCase(op)) {
                 try {
                     IOperation opAtual = clazz.getDeclaredConstructor().newInstance();
-                    return opAtual.calcular(a, b);
+                    return opAtual.calcular(valores);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
