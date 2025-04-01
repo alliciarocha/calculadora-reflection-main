@@ -7,13 +7,14 @@ import java.util.Scanner;
 
 public class Menu {
     public static void show(){
+        System.out.println("****** CALCULADORA ******");
         Scanner sc = new Scanner(System.in);
 
         while(true){
             Reflections reflections = new Reflections("org.example.model");
             Set<Class<? extends IOperation>> classes = reflections.getSubTypesOf(IOperation.class);
 
-            System.out.println("\nOperações:");
+            System.out.println("Operações:");
             for (Class<? extends IOperation> clazz : classes) {
                 System.out.println("- " + clazz.getSimpleName());
             }
@@ -30,8 +31,10 @@ public class Menu {
 
             System.out.println("Digite o Primeiro Valor");
             int a = sc.nextInt();
+            sc.nextLine();
             System.out.println("Digite o Segundo Valor");
             int b = sc.nextInt();
+            sc.nextLine();
 
             ControladorCalculadora control = new ControladorCalculadora();
 
